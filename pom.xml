@@ -12,6 +12,8 @@
 	</properties>
 	<modules>
 		<module>streams</module>
+		<module>generics</module>
+		<module>InputOutput</module>
 	</modules>
 	<dependencies>
 		<dependency>
