@@ -10,6 +10,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collector;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Generic java Stream test.
@@ -18,6 +20,9 @@ import org.junit.Test;
  * @version 1.0
  */
 public class TestFilters extends BaseStreamsTest {
+    
+    /** Class logger. */
+    private static final Logger LOG = LoggerFactory.getLogger(TestFilters.class);
 
 
 	@Test
