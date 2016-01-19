@@ -9,7 +9,7 @@ public class Thread2 {
 	}
 
 	private static void test1() {
-		// Runnable is functionalInteface -> we can use in labmda expressions.
+		// Runnable is functionalInteface -> we can use in lambda expressions.
 		Runnable task = () -> {
 			String threadName = Thread.currentThread().getName();
 			System.out.println("Hello " + threadName);
