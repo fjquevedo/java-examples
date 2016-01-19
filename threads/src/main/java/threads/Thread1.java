@@ -6,8 +6,8 @@ public class Thread1 {
 		// There are two ways to create a new thread of execution.
 		// 1. Create a subclass of Thread
 		MyThread myThread = new MyThread(143);
-		myThread.start();// execuded by new Thread
-		myThread.run(); // executed by main
+		myThread.start();// execuded by a new Thread
+		myThread.run(); // executed by current thread (main)
 
 		// 2. Create class that implements Runnable and pass to the Thread
 		// constructor
