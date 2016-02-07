@@ -15,6 +15,7 @@
         <module>generics</module>
         <module>InputOutput</module>
         <module>threads</module>
+        <module>rest-service</module>
     </modules>
     <dependencies>
         <dependency>

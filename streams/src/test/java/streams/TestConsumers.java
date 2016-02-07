@@ -1,5 +1,7 @@
 package streams;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
@@ -19,13 +21,13 @@ public class TestConsumers extends BaseStreamsTest {
 		Consumer<Person> giveRaise = p -> p.setSalary(p.getSalary() / 100 * 5 + p.getSalary());
 		javaProgrammers.forEach(System.out::println);
 		javaProgrammers.forEach(giveRaise.andThen(System.out::println));
-		
-		
+
 		String[] strt = javaProgrammers.stream().map(j -> j.getFirstName()).toArray(String[]::new);
+		
+		List<String> emptyList = new ArrayList<>();
+		String[] emptyArray = emptyList.stream().toArray(String[]::new);
 		
 		Stream<String> map = javaProgrammers.stream().map(j -> j.getFirstName());
 		
-		
 	}
-
 }
