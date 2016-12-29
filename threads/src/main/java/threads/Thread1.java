@@ -1,16 +1,20 @@
 package threads;
 
+import java.util.concurrent.TimeUnit;
+
 public class Thread1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// There are two ways to create a new thread of execution.
-		// 1. Create a subclass of Thread
+		// 1. Create a subclass of Thread (MyThread extends Thread)
 		MyThread myThread = new MyThread(143);
 		myThread.start();// execuded by a new Thread
+		TimeUnit.SECONDS.sleep(1);
 		myThread.run(); // executed by current thread (main)
 
+		TimeUnit.SECONDS.sleep(2);
 		// 2. Create class that implements Runnable and pass to the Thread
-		// constructor
+		// constructor (MyRunnable implements Runnable)
 		Thread thread = new Thread(new MyRunnable(25));
 		thread.start();
 		thread.run();
